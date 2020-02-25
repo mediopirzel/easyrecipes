@@ -1,0 +1,25 @@
+/* · Mandatory imports */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,700|Signika:700&display=swap);
+@import url(reset.css);
+@import url(header.css);
+
+
+body{
+    font: normal 300 20px 'Lato', sans-serif;
+    color: #000;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --strong-orange: rgba(245,129,53,1);
+    --light-orange: rgba(241,171,47,1);
+    --light-orange-30: rgba(241,171,47,0.3);
+    --light-orange-15: rgba(241,171,47,0.15);
+    --light-orange-10: rgba(241,171,47,0.1);
+    --strong-green: rgba(0,163,84,1);
+    --light-green: rgba(141,182,61,1);
+}
+
+

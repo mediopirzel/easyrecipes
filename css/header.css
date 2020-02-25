@@ -1,0 +1,39 @@
+
+.page-header {
+
+}
+
+
+nav {
+    
+}
+
+.menu-item {
+    font: normal 700 1em 'Signika', sans-serif;
+    color: #FFF;
+}
+
+.top-wrapper{
+    display: grid;
+    grid-template-columns: 1fr minmax(100%, 1120px) 1fr;
+    grid-template-areas: '. hd .';
+} 
+
+.home .top-wrapper{
+    background: url(../img/main-blog-image.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.blog-post .top-wrapper {
+    background: linear-gradient(180deg, var(--strong-orange) 0%, var(--light-orange) 100%);
+}
+
+.logo-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 1em;
+    align-items: flex-end;
+    grid-area: hd;
+
+}
