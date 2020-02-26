@@ -15,11 +15,13 @@ nav {
 
 .top-wrapper{
     display: grid;
-    grid-template-columns: 1fr minmax(100%, 1120px) 1fr;
-    grid-template-areas: '. hd .';
+    grid-template-columns: 1fr minmax(auto, 1120px) 1fr;
 } 
 
 .home .top-wrapper{
+    grid-template-areas:
+        '. hd .'
+        '. h1 .';
     background: url(../img/main-blog-image.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -28,12 +30,25 @@ nav {
     background: linear-gradient(180deg, var(--strong-orange) 0%, var(--light-orange) 100%);
 }
 
-.logo-menu-wrapper {
+
+.page-header {
+    grid-area: hd;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #FFF;
     padding-bottom: 1em;
     align-items: flex-end;
-    grid-area: hd;
+    padding: 1em 0.5em 0.8em 0.5em;
 
+}
+
+.main-menu .menu-item {
+    margin: 0 0 0.5em 0.5em;
+}
+
+h1.home-title {
+    grid-area: h1;
+    text-align: center;
+    color: #FFF;
+    padding: 20%;
 }

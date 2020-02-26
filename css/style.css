@@ -15,11 +15,143 @@ body{
 :root {
     --strong-orange: rgba(245,129,53,1);
     --light-orange: rgba(241,171,47,1);
-    --light-orange-30: rgba(241,171,47,0.3);
+    --light-orange-30: rgba(247,226,190,1);
     --light-orange-15: rgba(241,171,47,0.15);
     --light-orange-10: rgba(241,171,47,0.1);
     --strong-green: rgba(0,163,84,1);
     --light-green: rgba(141,182,61,1);
+    --light-grey: rgba(150,150,150,1);
+    --regular-width: 735px;
+    --wide-width: 1120px;
+}
+
+h1,
+h3{
+   font: normal 700 80px 'Signika', sans-serif;
+    margin-bottom: 1.5em;
+}
+
+h3{
+    font-size: 34px;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+.intro-text {
+    max-width: var(--regular-width);
+    padding: 0 1em;
+    margin: 3em auto;
 }
 
 
+/* BLOG LIST */
+
+.articles-list-background{
+    background: var(--light-orange-15);
+}
+
+.articles-list-wrapper{
+    margin: 8em auto 0 auto;
+    padding: 5em 1em;
+    max-width: var(--wide-width);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article-list-item {
+    display: grid;
+    grid-template-columns: 35% 50% 15%;
+    grid-template-rows: 3fr 1fr 2fr;
+    flex: 0 0 45%;
+    margin-bottom: 4em;
+}
+
+.article-list-image {
+    grid-area: 1 / 1 / 3 / 3;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.article-list-link {
+    background: #FFF;
+    grid-area: 2 / 2 / 4 / 4;
+    padding: 1em;
+    color: var(--light-grey);
+}
+
+.article-list-title {
+    color: var(--strong-orange);
+}
+
+/* HIGHLIGHT LATEST ENTRY*/
+.article-list-item:first-child {
+    flex: 0 0 100%;
+    grid-template-columns: 55% 30% 15%;
+    grid-template-rows: 5fr 1fr 2fr;
+    margin-top: -8em;
+}
+
+.article-list-item:first-child .article-list-link{
+    background: var(--strong-orange);
+    color: rgba(0,0,0,0.8);
+}
+
+.article-list-item:first-child .article-list-title {
+    color: #FFF;
+}
+
+.article-list-item:nth-child(4n + 1) .article-list-image{
+    background-image: url(../img/chicken_peas.jpg);
+}
+
+.article-list-item:nth-child(2) .article-list-image{
+    background-image: url(../img/asperagus10.jpg);
+}
+
+.article-list-item:nth-child(3) .article-list-image{
+    background-image: url(../img/brandy_chicken13.jpg);
+}
+
+.article-list-item:nth-child(4) .article-list-image{
+    background-image: url(../img/pork_marbella4.jpg);
+}
+
+
+/* SUBSCRIBE FORM */
+
+.subscribe-wrapper{
+    background: var(--light-orange);
+}
+
+.subscribe-wrapper header {
+    background: var(--light-orange-30);
+    text-align: center;
+    padding: 2em 0;
+}
+
+.subscriber-form {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    max-width: var(--wide-width);
+    padding: 2em 0;
+}
+
+.subscriber-form input{
+    background: var(--strong-orange);
+    border: none;
+    padding: 1em;
+    color: #FFF;
+}
+
+.subscriber-form button{
+    background: #FFF;
+    color: var(--strong-orange);
+    font: normal 700 24px 'Signika', sans-serif;
+    border: none;
+}
