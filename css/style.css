@@ -198,4 +198,15 @@ img {
 .share-post {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
+}
+
+.share-post a{
+    width: 60px;
+    height: 60px;
+    background: var(--strong-orange) url(../img/ico_facebook.svg) center center no-repeat;
+    border-radius: 50%;
+    overflow: hidden;
+    text-indent: -999px;
 }
