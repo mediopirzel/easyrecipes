@@ -1,0 +1,55 @@
+/* SUBSCRIBE FORM */
+
+.subscribe-wrapper{
+    background: var(--light-orange);
+}
+
+.subscribe-wrapper header {
+    background: var(--light-orange-30);
+    text-align: center;
+    padding: 2em 0;
+}
+
+.subscriber-form {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    max-width: var(--wide-width);
+    padding: 2em 0;
+}
+
+.subscriber-form input{
+    background: var(--strong-orange);
+    border: none;
+    padding: 1em;
+    color: #FFF;
+}
+
+.subscriber-form input::placeholder{
+    color: #FFF;
+}
+
+.subscriber-form button{
+    background: #FFF;
+    color: var(--strong-orange);
+    font: normal 700 24px 'Signika', sans-serif;
+    border: none;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 2em 0 3.5em 0;
+    margin: 0 auto;
+    color: var(--light-grey);
+}
+
+.subscribe-wrapper h2 {
+    margin-bottom: 0;
+    color: var(--strong-orange);
+}
+
+.subscribe-wrapper .subtitle{
+    font-size: 30px;
+    color: var(--light-grey);
+}
