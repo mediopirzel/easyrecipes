@@ -13,10 +13,10 @@
 .subscriber-form {
     display: grid;
     grid-gap: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     margin: 0 auto;
     max-width: var(--wide-width);
-    padding: 2em 0;
+    padding: 2em 1em;
 }
 
 .subscriber-form input{
@@ -33,8 +33,9 @@
 .subscriber-form button{
     background: #FFF;
     color: var(--strong-orange);
-    font: normal 700 24px 'Signika', sans-serif;
+    font: normal 700 1.2em 'Signika', sans-serif;
     border: none;
+    padding: 0.5em;
 }
 
 .footer-text {
@@ -50,6 +51,21 @@
 }
 
 .subscribe-wrapper .subtitle{
-    font-size: 30px;
+    font-size: 1.5em;
     color: var(--light-grey);
 }
+
+@media only screen and (min-width: 750px){
+    .subscriber-form {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 1120px){
+
+    .subscriber-form {
+        padding: 2em 0;
+    }
+}
+
+

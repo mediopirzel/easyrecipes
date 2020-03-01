@@ -6,7 +6,7 @@
 
 
 body{
-    font: normal 300 20px/1.4em 'Lato', sans-serif;
+    font: normal 300 17px/1.4em 'Lato', sans-serif;
     color: #000;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -40,24 +40,24 @@ h1,
 h2,
 h3,
 h4{
-   font: normal 700 80px 'Signika', sans-serif;
+   font: normal 700 4em 'Signika', sans-serif;
 }
 
 h1{
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 
 h2{
-    font-size: 56px;
+    font-size: 2.8em;
     margin-bottom: 1em;
 }
 
 h3{
-    font-size: 34px;
+    font-size: 1.7em;
 }
 
 h4{
-    font-size: 24px;
+    font-size: 1.2em;
 }
 
 p {
@@ -73,9 +73,18 @@ img {
 
 
 small {
-    font-size: 16px;
+    font-size: 0.8em;
 }
 
+cite {
+    font-style: normal;
+    font-size: 2em;
+    margin: 1.5em;
+    color: var(--light-green);
+    text-align: center;
+    display: block;
+    line-height: 120%;
+}
 
 /* intro-tezxt*/
 
@@ -105,9 +114,6 @@ small {
     margin: 8em auto 0 auto;
     padding: 5em 1em;
     max-width: var(--wide-width);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .article-list-item {
@@ -137,16 +143,15 @@ small {
 }
 
 /* HIGHLIGHT LATEST ENTRY*/
-.article-list-item:first-child {
-    flex: 0 0 100%;
-    grid-template-columns: 55% 30% 15%;
-    grid-template-rows: 5fr 1fr 2fr;
-    margin-top: -8em;
+    .article-list-item:first-child {
+        margin-top: -8em;
 }
+
 
 .article-list-item:first-child .article-list-link{
     background: var(--strong-orange);
     color: rgba(0,0,0,0.8);
+    padding-bottom: 3em;
 }
 
 .article-list-item:first-child h3 {
@@ -187,10 +192,6 @@ small {
 }
 
 .steps-wrapper {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: var(--wide-width);
     margin: 0 auto;
     list-style: none;
     counter-reset: steps-counter;
@@ -204,7 +205,7 @@ small {
     display: flex;
     padding: 1em;
     margin-bottom: 2em;
-    font-size: 18px;
+    font-size: 0.9em;
 }
 
 .steps-wrapper li::before {
@@ -217,19 +218,16 @@ small {
 .gallery-steps {
     display: grid;
     grid-gap: 1em;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.gallery-steps figure{
-    margin-bottom: -5em;
-}
 
 .gallery-steps figcaption {
     text-align: center;
-    font-size: 16px;
+    font-size: 0.8em;
     font-weight: 700;
     color: var(--light-grey);
-    padding: 1em 0 0 0;
+    padding: 0.5em 0 0 0;
 }
 
 /* Share */
@@ -247,8 +245,8 @@ small {
 }
 
 .share-post a{
-    width: 60px;
-    height: 60px;
+    width: 3em;
+    height: 3em;
     background: var(--strong-orange) url(../img/ico_facebook.svg) center center no-repeat;
     border-radius: 50%;
     overflow: hidden;
@@ -273,17 +271,14 @@ small {
     display: flex;
     padding-left: calc(50vw - (var(--wide-width)/2));
     background: var(--light-orange-10);
+    flex-wrap: wrap;
 }
 
 .post-tags,
 .post-date {
     color: var(--light-grey);
-    padding: 2.5em 2em 1em 0;
-    flex: 0 0 28%
-}
-
-.post-date {
-    flex: 0 0 22%
+    padding: 2em 1em;
+    flex: 0 0 50%
 }
 
 .post-author {
@@ -298,7 +293,7 @@ small {
 
 .post-tags a {
     color: var(--strong-orange);
-    font-size: 16px;
+    font-size: 0.8em;
     line-height: 1em;
     text-decoration: underline;
 }
@@ -309,7 +304,7 @@ small {
 }
 
 .post-meta-wrapper .subtitle{
-    font-size: 24px;
+    font-size: 1.2em;
 }
 
 .date-tag,
@@ -323,11 +318,11 @@ small {
 }
 
 .author-image{
-    width: 118px;
-    height: 118px;
+    width: 5.9em;
+    height: 5.9em;
     background: red;
     border-radius:  50%;
-    flex: 1 0 118px;
+    flex: 0 0 5.9em;
     background: url(../img/foto_mini_xavier.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -353,4 +348,77 @@ small {
     border-radius: 4px;
     padding: 0.5em 1em;
     margin: 0 0.4em;
+}
+
+
+@media only screen and (min-width: 750px){
+
+    body{
+        font-size: 18px;
+    }
+
+    /* blog list */
+    .articles-list-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* HIGHLIGHT LATEST ENTRY*/
+    .article-list-item:first-child {
+        flex: 0 0 100%;
+        grid-template-columns: 55% 30% 15%;
+        grid-template-rows: 6fr 1fr 2fr;
+    }
+
+}
+
+
+@media only screen and (min-width: 650px){
+
+.steps-wrapper {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: var(--wide-width);
+    }
+
+}
+
+@media only screen and (min-width: 750px){
+
+    .post-tags,
+    .post-date {
+        padding: 2.5em 2em 1em 0;
+        flex: 0 0 28%
+    }
+
+    .post-date {
+        flex: 0 0 22%
+    }
+
+    .gallery-steps {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .gallery-steps figure{
+        margin-bottom: -5em;
+    }
+
+}
+
+@media only screen and (min-width: 1000px){
+
+    body{
+        font-size: 19px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1400px){
+
+    body{
+        font-size: 20px;
+    }
 }
