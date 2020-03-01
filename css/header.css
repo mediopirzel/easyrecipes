@@ -11,11 +11,6 @@
     color: var(--light-grey);
 }
 
-.menu-item {
-    font: normal 700 1em 'Signika', sans-serif;
-    color: #FFF;
-}
-
 .top-wrapper{
     display: grid;
         grid-template-areas:
@@ -26,13 +21,17 @@
 } 
 
 .home .top-wrapper{
-
     background: url(../img/main-blog-image.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .blog-post .top-wrapper {
     background: linear-gradient(180deg, var(--strong-orange) 0%, var(--light-orange) 100%);
+    color: #FFF;
+}
+
+.regular-page .top-wrapper {
+    background: linear-gradient(180deg, var(--strong-green) 0%, var(--light-green) 100%);
     color: #FFF;
 }
 
@@ -48,8 +47,10 @@
     margin-bottom: 90px;
 }
 
-.main-menu .menu-item {
+.main-menu a {
     margin: 0 0 0.5em 2em;
+    font: normal 700 1em 'Signika', sans-serif;
+    color: #FFF;
 }
 
 h1.home-title {
@@ -64,10 +65,12 @@ h1.home-title {
     padding-right: 25%;
 }
 
+.text-header-wrapper,
 .ingredients-wrapper {
     grid-area: 2/3/3/4;
 }
 
+.text-header-wrapper p,
 .ingredients-wrapper p {
     margin-bottom: 0.4em;
 }
@@ -83,6 +86,7 @@ h1.home-title {
     */
 }
 
+.text-header-wrapper .subtitle,
 .blog-title-wrapper .subtitle,
 .ingredients-wrapper .subtitle{
     color: rgba(0,0,0,0.5);
@@ -94,4 +98,20 @@ h1.home-title {
 
 .ingredients-wrapper .subtitle{
     margin-bottom: 0.5em;
+}
+
+.text-header-wrapper {
+    font-weight: 700;
+    margin-bottom: 4em;
+}
+
+.text-header-wrapper em {
+    color: #000;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.tags-wrapper a {
+    color: #000;
+    text-decoration: underline;
 }

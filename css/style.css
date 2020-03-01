@@ -6,7 +6,7 @@
 
 
 body{
-    font: normal 300 20px 'Lato', sans-serif;
+    font: normal 300 20px/1.4em 'Lato', sans-serif;
     color: #000;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -38,25 +38,46 @@ body{
 
 h1,
 h2,
-h3{
+h3,
+h4{
    font: normal 700 80px 'Signika', sans-serif;
-    margin-bottom: 1.5em;
 }
 
+h1{
+    margin-bottom: 1.5em;
+}
 
 h2{
     font-size: 56px;
     margin-bottom: 1em;
-
 }
 
 h3{
     font-size: 34px;
 }
 
+h4{
+    font-size: 24px;
+}
+
 p {
     margin-bottom: 1.5em;
 }
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+small {
+    font-size: 16px;
+}
+
+
+/* intro-tezxt*/
 
 .intro-text {
     max-width: var(--regular-width);
@@ -64,9 +85,14 @@ p {
     margin: 3em auto;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.intro-text h3{
+    color: var(--light-green);
+    margin-bottom: 0.5em;
+}
+
+.intro-text a{
+    color: var(--strong-orange);
+    text-decoration: underline;
 }
 
 /* BLOG LIST */
@@ -128,31 +154,31 @@ img {
 }
 
 .article-list-item:nth-child(4n + 1) .article-list-image{
-    background-image: url(../img/chicken_peas.jpg);
+    background-image: url(../img/recipes/chicken_peas.jpg);
 }
 
 .article-list-item:nth-child(2) .article-list-image{
-    background-image: url(../img/asperagus10.jpg);
+    background-image: url(../img/recipes/asperagus10.jpg);
 }
 
 .article-list-item:nth-child(3) .article-list-image{
-    background-image: url(../img/brandy_chicken13.jpg);
+    background-image: url(../img/recipes/brandy_chicken13.jpg);
 }
 
 .article-list-item:nth-child(4) .article-list-image{
-    background-image: url(../img/pork_marbella4.jpg);
+    background-image: url(../img/recipes/pork_marbella4.jpg);
 }
 
 
 /* BLOG POST */
 
-.blog-post .main-content {
+.has-main-picture .main-content {
     padding-top: 6em;
 }
 
 .steps-background {
     background: rgba(150,150,150,0.2);
-    padding: 3em 0;
+    padding: 3em 0 0 0;
 }
 
 .steps-background h2 {
@@ -168,6 +194,7 @@ img {
     margin: 0 auto;
     list-style: none;
     counter-reset: steps-counter;
+    padding-bottom: 4em;
 }
 
 .steps-wrapper li {
@@ -193,13 +220,30 @@ img {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.gallery-steps figure{
+    margin-bottom: -5em;
+}
+
+.gallery-steps figcaption {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--light-grey);
+    padding: 1em 0 0 0;
+}
+
 /* Share */
 
 .share-post {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 10em 1em 1em 1em;
+    color: var(--light-grey);
+}
 
+.share-post > * {
+    margin-left: 1em;
 }
 
 .share-post a{
@@ -209,4 +253,104 @@ img {
     border-radius: 50%;
     overflow: hidden;
     text-indent: -999px;
+}
+
+.share-post a[href*=facebook]{
+    background-image: url(../img/ico_facebook.svg);
+}
+
+.share-post a[href*=twitter]{
+    background-image: url(../img/ico_twitter.svg);
+}
+
+.share-post a[href*=linkedin]{
+    background-image: url(../img/ico_lkd.svg);
+}
+
+/* post metas */
+
+.post-meta-wrapper{
+    display: flex;
+    padding-left: calc(50vw - (var(--wide-width)/2));
+    background: var(--light-orange-10);
+}
+
+.post-tags,
+.post-date {
+    color: var(--light-grey);
+    padding: 2.5em 2em 1em 0;
+    flex: 0 0 28%
+}
+
+.post-date {
+    flex: 0 0 22%
+}
+
+.post-author {
+    padding-right: calc(50vw - (var(--wide-width)/2));
+    padding-top: 2.5em;
+    padding-left: 2em;
+    background: var(--light-orange);
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.post-tags a {
+    color: var(--strong-orange);
+    font-size: 16px;
+    line-height: 1em;
+    text-decoration: underline;
+}
+
+.post-author a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.post-meta-wrapper .subtitle{
+    font-size: 24px;
+}
+
+.date-tag,
+.author-intro {
+    line-height: 100%;
+}
+
+.post-author h4,
+.post-author .subtitle{
+    color: #FFF;
+}
+
+.author-image{
+    width: 118px;
+    height: 118px;
+    background: red;
+    border-radius:  50%;
+    flex: 1 0 118px;
+    background: url(../img/foto_mini_xavier.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.author-info-wrapper{
+    padding-left: 1.5em;
+}
+
+/* post navigation */
+
+.posts-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3em 1em;
+}
+
+.posts-navigation a{
+    font: normal 700 24px 'Signika', sans-serif;
+    display: inline-block;
+    background: var(--strong-orange);
+    color: #FFF;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    margin: 0 0.4em;
 }
