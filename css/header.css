@@ -71,11 +71,16 @@ h1.home-title {
 .text-header-wrapper,
 .ingredients-wrapper {
     padding: 0 1em 4em 1em;
+    min-height: 10em;
 }
 
 .text-header-wrapper p,
 .ingredients-wrapper p {
     margin-bottom: 0.4em;
+}
+
+.text-header-wrapper p{
+    font-weight: 700;
 }
 
 .main-image {
@@ -101,10 +106,7 @@ h1.home-title {
     margin-bottom: 0.5em;
 }
 
-.text-header-wrapper p{
-    font-weight: 700;
-    min-height: 10em;
-}
+
 
 .text-header-wrapper em {
     color: #000;
