@@ -80,7 +80,11 @@ h1.home-title {
 
 .main-image {
     grid-area: pic;
-    margin: 0 1em -6em 1em
+    margin: 0 1em;
+}
+
+.main-image img {
+    margin-bottom: -6em;
 }
 
 .text-header-wrapper .subtitle,
@@ -99,6 +103,7 @@ h1.home-title {
 
 .text-header-wrapper p{
     font-weight: 700;
+    min-height: 10em;
 }
 
 .text-header-wrapper em {
@@ -153,7 +158,7 @@ h1.home-title {
 }
 @media only screen and (min-width: 1120px){
     .main-image {
-        margin: 0 0 -6em 0
+        margin: 0;
     }
 
     .blog-title-wrapper {

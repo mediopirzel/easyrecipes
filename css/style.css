@@ -236,7 +236,7 @@ cite {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 10em 1em 1em 1em;
+    padding: 1em;
     color: var(--light-grey);
 }
 
@@ -347,7 +347,7 @@ cite {
     color: #FFF;
     border-radius: 4px;
     padding: 0.5em 1em;
-    margin: 0 0.4em;
+    margin: 0.2em 0.4em;
 }
 
 
@@ -403,6 +403,10 @@ cite {
 
     .gallery-steps figure{
         margin-bottom: -5em;
+    }
+
+    .share-post {
+        padding: 10em 1em 1em 1em;
     }
 
 }
